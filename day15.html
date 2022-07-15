@@ -1,0 +1,63 @@
+<html>
+
+<head>
+    <title>
+        Day 15
+    </title>
+    <script src="https://ajax.googleapis.com/ajax/libs/jquery/3.6.0/jquery.min.js"></script>
+    <script type="text/javascript">
+        $(document).ready(function () {
+            alert("page Loaded");
+
+            $("#TxtTestFocous").focus(function () {
+                $(this).css("background-color", "blue")
+            });
+
+            $("#TxtTestBlur").blur(function () {
+                $(this).css("background-color", "red")
+            });
+
+            $("#TxtTestKeypress").keypress(function () {
+                alert($(this).val());
+
+            });
+            $("#TxtTestKeyup").keyup(function () {
+                alert($(this).val());
+
+            });
+            $("#hide").click(function () {
+                $("p").hide();
+            });
+            $("#show").click(function () {
+                $("p").show();
+            });
+        });
+    </script>
+    <style>
+        * {
+            background-color: antiquewhite;
+            text-align: center;
+        }
+    </style>
+</head>
+
+<body>
+    <h2>J Query</h2>
+    <hr>
+    <input type="text" placeholder="Enter your name..." id="TxtTestFocous">
+    <hr />
+    <input type="text" placeholder="Enter your name..." id="TxtTestBlur">
+    <hr />
+    <input type="text" placeholder="Enter your name..." id="TxtTestKeypress">
+    <hr />
+    <input type="text" placeholder="Enter your name..." id="TxtTestKeyup">
+    <hr>
+    <p>If you click on the "Hide" button, I will disappear.</p>
+
+    <button id="hide">Hide</button>
+    <button id="show">Show</button>
+
+    <hr />
+</body>
+
+</html>
