@@ -1,0 +1,103 @@
+<html>
+    <head>
+
+        <title>
+            Day 17
+        </title>
+        <script src="https://ajax.googleapis.com/ajax/libs/jquery/3.6.0/jquery.min.js"></script>
+        <script type="text/javascript">
+            //Reg Ex Declaration - Globaly.
+			var $FNameLNameRegEx = /^([a-zA-Z]{2,20})$/;
+			var $FullNameRegEx = /^([a-zA-Z ]{2,40})$/;
+			var $BankAccountNameRegEx = /^([a-zA-Z ]{2,60})$/;
+			var $PasswordRegEx = /^(?=.*?[A-Z])(?=.*?[a-z])(?=.*?[0-9])(?=.*?[^\w\s]).{8,12}$/;
+
+			var $EmailIdRegEx = /^\b[A-Z0-9._%-]+@[A-Z0-9.-]+\.[A-Z]{2,8}\b$/i;
+			var $ConNoRegEx = /^([0-9]{10})$/;
+			var $AgeRegEx = /^([0-9]{1,2})$/;
+			var $AadhaarNoRegEx = /^([0-9]{12})$/;
+			var $GSTNoRegEx=/^[0-9]{2}[A-Z]{5}[0-9]{4}[A-Z]{1}[1-9A-Z]{1}Z[0-9A-Z]{1}$/;
+			var $IndianDrivingLicenseNoRegEx = /^([A-Z]{2,3}[-/0-9]{8,13})$/;
+			var $India
+            nVehicleRegNoRegEx = /^([A-Z]{2}[0-9]{1,2}[A-Z]{1,3}[0-9]{1,4})$/;
+			var $PincodeRegEx = /^[1-9][0-9]{5,6}$/;
+			var $PANNoRegEx = /^[A-Z]{3}[ABCFGHLJPT][A-Z][0-9]{4}[A-Z]$/;
+			var $IFSCCodeRegEx = /^[A-Za-z]{4}0[A-Z0-9a-z]{6}$/; 
+			var $BankAccountNoRegEx = /^([0-9]{9,18})$/;
+			var $LatitudeLongitude=/^(-?(?:1[0-7]|[1-9])?\d(?:\.\d{1,8})?|180(?:\.0{1,8})?)$/;
+        
+            $(document).ready(function(){
+                $("#fname").blur(function(){
+                    $("#fnamevalidation").empty();
+                    if($(this).val()==null || $(this).val()==""){
+                        $("#fnamevalidation").html("Name required...!!");
+                    }
+                    else{
+                        if(
+                            !$(this).val().match($FNameLNameRegEx)){
+                            $("#fnamevalidation").html("Invalid Name....!!");
+                        }
+                    }
+                });
+
+                $("#lname").blur(function(){
+                    $("#lnamevalidation").empty();
+                    if($(this).val()==null || $(this).val()==""){
+                        $("#lnamevalidation").html("Name required...!!");
+                    }
+                    else{
+                        if(
+                            !$(this).val().match($FNameLNameRegEx)){
+                            $("#lnamevalidation").html("Invalid Name....!!");
+                        }
+                    }
+                });
+                $("#email").blur(function(){
+                    $("#emailvalidation").empty();
+                    if($(this).val()==null || $(this).val()==""){
+                        $("#emailvalidation").html("Name required...!!");
+                    }
+                    else{
+                        if(
+                            !$(this).val().match($EmailIdRegEx)){
+                            $("#emailvalidation").html("Invalid Name....!!");
+                        }
+                    }
+                });
+            });
+        </script>
+        <style>
+            h2{
+                text-align: center;
+            }
+        </style>
+    </head>
+    <body>
+        <form action="#">
+            <h2>Application Form</h2> <hr>
+            <label for="fname">First Name:</label>
+            <input type="text" id="fname" autofocous placeholder="Enter yout first name......">
+            <small id="fnamevalidation"></small>
+            <hr>
+
+            <label for="lname">Last Name:</label>
+            <input type="text" id="lname"placeholder="Enter yout last name......">
+            <small id="lnamevalidation"></small>
+            <hr>
+            <label for="Gender">Gender:</label>
+            <input type="radio" id="Male" name="Gender"value="Male">Male
+            <input type="radio" id="Female" name="Gender" value="Female">Female
+            <input type="radio" id="Other" name="Gender" value="Other">Other
+            <hr>
+            <label for="email">E-Mail:</label>
+            <input type="text" id="email" placeholder="abc@xyz">
+            <small id="emailvalidation"></small>
+            <hr>
+            <label for="password">Password:</label>
+            <input type="password" id="password"><hr>
+            <label for="age">Age:</label>
+            <input type="text" id="age"><hr>
+            <input type="submit"><hr>
+        </form>
+    </body>
+</html>
