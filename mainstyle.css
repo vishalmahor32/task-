@@ -1,0 +1,15 @@
+*{
+    font-family: cursive;
+}
+.navabarfix{
+    position: fixed;
+}
+.fa-star{  
+    font-size : 50px;  
+    align-content: center;  
+}  
+.con {  
+    height: 100px;  
+    width: 600px;  
+    margin: auto;  
+}

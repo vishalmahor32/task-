@@ -1,0 +1,408 @@
+<html>
+
+<head>
+  <title>
+    Shop
+  </title>
+  <link rel="stylesheet" href="/Day7/Bootstrap/bootstrap.css">
+  <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.2.0-beta1/dist/css/bootstrap.min.css" rel="stylesheet"
+    integrity="sha384-0evHe/X+R7YkIZDRvuzKMRqM+OrBnVFBL6DOitfPri4tjfHxaWutUpFmBp4vmVor" crossorigin="anonymous">
+  <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.2.0-beta1/dist/js/bootstrap.bundle.min.js"
+    integrity="sha384-pprn3073KE6tl6bjs2QrFaJGz5/SUsLqktiwsUTF55Jfv3qYSDhgCecCxMW52nD2"
+    crossorigin="anonymous"></script>
+  <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.1.1/css/all.min.css">
+  <link rel="stylesheet" href="/website3/mainstyle.css">
+  <link href="https://code.jquery.com/ui/1.10.4/themes/ui-lightness/jquery-ui.css" rel="stylesheet" type="text/css" />
+  <script src="https://code.jquery.com/jquery-1.10.2.js" type="text/javascript"></script>
+  <script src="https://code.jquery.com/ui/1.10.4/jquery-ui.js" type="text/javascript"></script>
+
+  <script type="text/javascript">
+    function openCity(evt, cityName) {
+      var i, tabcontent, tablinks;
+      tabcontent = document.getElementsByClassName("tabcontent");
+      for (i = 0; i < tabcontent.length; i++) {
+        tabcontent[i].style.display = "none";
+      }
+      tablinks = document.getElementsByClassName("tablinks");
+      for (i = 0; i < tablinks.length; i++) {
+        tablinks[i].className = tablinks[i].className.replace(" active", "");
+      }
+      document.getElementById(cityName).style.display = "block";
+      evt.currentTarget.className += " active";
+    }
+    $(document).ready(function () {
+      $("#st1").click(function () {
+        $(".fa-star").css("color", "black");
+        $("#st1").css("color", "yellow");
+
+      });
+      $("#st2").click(function () {
+        $(".fa-star").css("color", "black");
+        $("#st1, #st2").css("color", "yellow");
+
+      });
+      $("#st3").click(function () {
+        $(".fa-star").css("color", "black")
+        $("#st1, #st2, #st3").css("color", "yellow");
+
+      });
+      $("#st4").click(function () {
+        $(".fa-star").css("color", "black");
+        $("#st1, #st2, #st3, #st4").css("color", "yellow");
+
+      });
+      $("#st5").click(function () {
+        $(".fa-star").css("color", "black");
+        $("#st1, #st2, #st3, #st4, #st5").css("color", "yellow");
+
+      });
+      $("#st1p1").click(function () {
+        $(".fa-star").css("color", "black");
+        $("#st1p1").css("color", "yellow");
+
+      });
+      $("#st2p1").click(function () {
+        $(".fa-star").css("color", "black");
+        $("#st1p1, #st2p1").css("color", "yellow");
+
+      });
+      $("#st3p1").click(function () {
+        $(".fa-star").css("color", "black")
+        $("#st1p1, #st2p1, #st3p1").css("color", "yellow");
+
+      });
+      $("#st4p1").click(function () {
+        $(".fa-star").css("color", "black");
+        $("#st1p1, #st2p1, #st3p1, #st4p1").css("color", "yellow");
+
+      });
+      $("#st5p1").click(function () {
+        $(".fa-star").css("color", "black");
+        $("#st1p1, #st2p1, #st3p1, #st4p1, #st5p1").css("color", "yellow");
+
+      });
+      $("#spinner-1").spinner({
+        min: 0,
+        max: 50
+      });
+      $("#spinner-2").spinner({
+        min: 0,
+        max: 12
+      });
+    });  
+  </script>
+  <style>
+    .tab {
+      overflow: hidden;
+      border: 1px solid #ccc;
+      background-color: #f1f1f1;
+    }
+
+    /* Style the buttons inside the tab */
+    .tab button {
+      background-color: inherit;
+      float: left;
+      border: none;
+      outline: none;
+      cursor: pointer;
+      padding: 14px 16px;
+      transition: 0.3s;
+      font-size: 17px;
+    }
+
+    /* Change background color of buttons on hover */
+    .tab button:hover {
+      background-color: #ddd;
+    }
+
+    /* Create an active/current tablink class */
+    .tab button.active {
+      background-color: #ccc;
+    }
+
+    /* Style the tab content */
+    .tabcontent {
+      display: none;
+      padding: 6px 12px;
+      border: 1px solid #ccc;
+      border-top: none;
+    }
+  </style>
+</head>
+<header class="navbarfix sticky-top">
+  <div class="px-3 py-2 text-bg-dark">
+    <div class="container">
+      <div class="d-flex flex-wrap align-items-center justify-content-center justify-content-lg-start">
+        <a href="/" class="d-flex align-items-center my-2 my-lg-0 me-lg-auto text-white text-decoration-none fs-1">
+          <img src="/website3/images/62854c8fe77b5.png" width="80" height="50" alt="logo">
+          Fashion Shop
+        </a>
+
+        <ul class="nav col-12 col-lg-auto my-2 justify-content-center my-md-0 text-small">
+          <li>
+            <a href="#" class="nav-link text-secondary">
+              <i class="fa-solid fa-house-chimney d-block mx-auto mb-1 navlogo fs-2"></i>
+              <div class="fs-3">
+                Home
+              </div>
+            </a>
+          </li>
+          <li>
+            <a href="#" class="nav-link text-white">
+              <i class="fa-solid fa-gift d-block mx-auto mb-1 navlogo fs-2"></i>
+              <div class="fs-3">
+                Gift Card
+              </div>
+            </a>
+          </li>
+          <li>
+            <a href="#" class="nav-link text-white">
+              <i class="fa-solid fa-bag-shopping d-block mx-auto mb-1 navlogo fs-2"></i>
+              <div class="fs-3">
+                Order
+              </div>
+            </a>
+          </li>
+          <li>
+            <a href="#" class="nav-link text-white">
+              <i class="fa-solid fa-cart-shopping d-block mx-auto mb-1 navlogo fs-2"></i>
+              <div class="fs-3">
+                Cart
+              </div>
+            </a>
+          </li>
+          <li>
+            <a href="#" class="nav-link text-white">
+              <i class="fas fa-user-circle d-block mx-auto mb-1 navlogo fs-2"></i>
+              <div class="fs-3">
+                Profile
+              </div>
+            </a>
+          </li>
+        </ul>
+      </div>
+    </div>
+  </div>
+  <!-- <div class="px-3 py-2 border-bottom mb-3">
+    <div class="container d-flex flex-wrap justify-content-center">
+      <form class="col-12 col-lg-auto mb-2 mb-lg-0 me-lg-auto" role="search">
+        <input type="search" class="form-control" placeholder="Search..." aria-label="Search">
+        <button type="button" class="btn btn-success">Search</button>
+        <button type="button" class="btn btn-primary">Filter</button>
+
+      </form>
+      <ul class="block-inline">
+      </ul>
+      <div class="text-end">
+        <button type="button" class="btn btn-success">Login</button>
+        <button type="button" class="btn btn-primary">Sign-up</button>
+      </div>
+    </div>
+  </div> -->
+</header>
+
+<body>
+  <div class="tab">
+    <button class="tablinks" onclick="openCity(event, 'man_cloths')">Man Cloths</button>
+    <button class="tablinks" onclick="openCity(event, 'female_cloths')">Female Cloths</button>
+    <button class="tablinks" onclick="openCity(event, 'electronics')">Electronics</button>
+  </div>
+  <div id="man_cloths" class="tabcontent">
+    <div class="fs-3">
+      <a href="#">t-shirt</a><br>
+      <a href="#">shirt</a><br>
+      <a href="#">footwear</a><br>
+      <a href="#">watches</a><br>
+    </div>
+  </div>
+  <div id="female_cloths" class="tabcontent">
+    <div class="fs-3">
+      <a href="#">t-shirt</a><br>
+      <a href="#">make-up</a><br>
+      <a href="#"></a><br>
+      <a href="#"></a><br>
+    </div>
+  </div>
+
+  <div id="electronics" class="tabcontent">
+    <div class="fs-3">
+      <a href="#">Mobile</a><br>
+      <a href="#">Tv</a><br>
+      <a href="#">Ac</a><br>
+      <a href="#">Laptop</a><br>
+    </div>
+  </div>
+  </div>
+
+
+  <hr class="featurette-divider">
+  <div class="container">
+    <div class="row featurette">
+
+      <div class="col-md-5 order-md-1">
+
+        <img src="https://cdn.shopify.com/s/files/1/0582/7418/5275/products/airjordan_4_1024x1024@2x.jpg?v=1657274252"
+          class="featurette-image img-fluid mx-auto" width="500" height="500" alt="jorden">
+      </div>
+      <div class="col-md-7 order-md-2">
+        <h1 class="featurette-heading fw-normal lh-1">Air Jordan Men's High Sneaker</h1>
+        <span class="fs-2">Price: </span>
+        <span class="text-success fs-2">80,000/-</span>
+
+        <div>4-star rating product
+        </div>
+
+        <label for="quantity" class="fs-2">Enter Product Quantity: </label>
+        <input type="text" id="spinner-1" value="0" /><br><br>
+
+        <label for="color" class="fs-2">Color:</label>
+        <select name="color" id="color" class="fs-2">
+          <option value="Blue">Blue</option>
+          <option value="Blue">White</option>
+          <option value="Blue">Black</option>
+        </select><br><br>
+
+        <label for="size" class="fs-2">Size: </label>
+        <input type="text" id="spinner-2" value="0" /><br><br>
+        <button class="btn btn-dark text-light fs-2">Add to cart</button>
+        <button class="btn btn-dark text-light fs-2">Place Order
+        </button><br><br>
+        <h2>Product details:</h2>
+        <h3>Exclusive design and durable materials every step feels light and breezy. Breathable, free-moving fabrics
+          which adjust according to your foot and creates an astoundingly easy-going experience. These stylish shoes are
+          the perfect inspiration for a fashionable look. Designed to offer comfort at its best, without compromising on
+          style. Made for long-term wear, with extra emphasis on providing cushion to the feet, removing heel strain.
+        </h3><br><br>
+        <div>
+          <h1 style="font-size:20px">Rate Product</h1>
+          <i class="fa fa-star" aria-hidden="true" id="st1"></i>
+          <i class="fa fa-star" aria-hidden="true" id="st2"></i>
+          <i class="fa fa-star" aria-hidden="true" id="st3"></i>
+          <i class="fa fa-star" aria-hidden="true" id="st4"></i>
+          <i class="fa fa-star" aria-hidden="true" id="st5"></i>
+        </div>
+      </div>
+    </div>
+  </div>
+  </div>
+  <hr class="featurette-divider">
+  <div class="container">
+    <div class="row featurette">
+
+      <div class="col-md-5 order-md-1">
+
+        <img src="https://encrypted-tbn0.gstatic.com/images?q=tbn:ANd9GcTOeJ2teGJCna5S9q4im1vdalXm8ClrllELsw&usqp=CAU"
+          width="500" height="500" alt="watch">
+      </div>
+      <div class="col-md-7 order-md-2">
+        <h1 class="featurette-heading fw-normal lh-1"> Men's t-shirt</h1>
+        <span class="fs-2">Price: </span>
+        <span class="text-success fs-2">5,000/-</span><del class="fs-2">8,499/-</del>
+
+        <div>4-star rating product
+        </div>
+
+        <label for="quantity" class="fs-2">Enter Product Quantity: </label>
+        <input type="text" id="spinner-1" value="0" /><br><br>
+        <label for="color" class="fs-2">Color:</label>
+        <select name="color" id="color" class="fs-2">
+          <option value="Blue">black</option>
+          <option value="Blue">White</option>
+          <option value="Blue">light pink</option>
+        </select><br><br>
+
+        <label for="size" class="fs-2">Size: </label>
+        <input type="text" id="spinner-2" value="0" /><br><br>
+
+
+        <button class="btn btn-dark text-light fs-2">Add to cart</button>
+        <button class="btn btn-dark text-light fs-2">Place Order
+        </button><br><br>
+        <h2>Feature:</h2>
+        <ul class="fs-3">
+          <li>Dial Design:-Solid</li>
+          <li>Display Type:- Analog</li>
+          <li>Tag Heuer's Exclusive smart fitted Leather strap</li>
+          <li>Push Button switch for movement</li>
+          <li>Date & 24 Hour couner</li>
+        </ul>
+        <div>
+          <h1 style="font-size:20px">Rate Product</h1>
+          <i class="fa fa-star" aria-hidden="true" id="st1p1"></i>
+          <i class="fa fa-star" aria-hidden="true" id="st2p1"></i>
+          <i class="fa fa-star" aria-hidden="true" id="st3p1"></i>
+          <i class="fa fa-star" aria-hidden="true" id="st4p1"></i>
+          <i class="fa fa-star" aria-hidden="true" id="st5p1"></i>
+        </div>
+      </div>
+    </div>
+  </div>
+  </div>
+  <hr class="featurette-divider">
+  <div class="container">
+    <div class="row featurette">
+
+      <div class="col-md-5 order-md-1">
+
+        <img
+          src="https://cdn.shopify.com/s/files/1/0582/7418/5275/products/TAGHeuerCarrerachronograph1_1024x1024@2x.jpg?v=1657941405"
+          width="500" height="500" alt="watch">
+      </div>
+      <div class="col-md-7 order-md-2">
+        <h1 class="featurette-heading fw-normal lh-1">Tag Heuer Carrera Chronograph Watch</h1>
+        <span class="fs-2">Price: </span>
+        <span class="text-success fs-2">12,499/-</span><del class="fs-2">25,499/-</del>
+
+        <div>4.5-star rating product
+        </div>
+
+        <label for="quantity" class="fs-2">Enter Product Quantity: </label>
+        <input type="text" id="spinner-1" value="0" /><br><br>
+
+
+        <button class="btn btn-dark text-light fs-2">Add to cart</button>
+        <button class="btn btn-dark text-light fs-2">Place Order
+        </button><br><br>
+        <h2>Feature:</h2>
+        <ul class="fs-3">
+          <li>Dial Design:-Solid</li>
+          <li>Display Type:- Analog</li>
+          <li>Tag Heuer's Exclusive smart fitted Leather strap</li>
+          <li>Push Button switch for movement</li>
+          <li>Date & 24 Hour couner</li>
+        </ul>
+        <div>
+          <h1 style="font-size:20px">Rate Product</h1>
+          <i class="fa fa-star" aria-hidden="true" id="st1p1"></i>
+          <i class="fa fa-star" aria-hidden="true" id="st2p1"></i>
+          <i class="fa fa-star" aria-hidden="true" id="st3p1"></i>
+          <i class="fa fa-star" aria-hidden="true" id="st4p1"></i>
+          <i class="fa fa-star" aria-hidden="true" id="st5p1"></i>
+        </div>
+      </div>
+    </div>
+  </div>
+  </div>
+</body>
+<footer class="d-flex flex-wrap justify-content-between align-items-center py-3 my-4 border-top">
+  <div class="col-md-4 d-flex align-items-center">
+    <a href="/" class="mb-3 me-2 mb-md-0 text-muted text-decoration-none lh-1">
+      <img src="/website3/images/62854c8fe77b5.png" height="50" alt="logo">
+    </a>
+    <span class="mb-3 mb-md-0 text-muted">© 2022 Company, Inc</span>
+  </div>
+
+  <ul class="nav col-md-4 justify-content-end list-unstyled d-flex">
+    <li class="ms-3"><a class="text-muted" href="#">
+        <i class="fa-brands fa-facebook fs-1"></i>
+      </a></li>
+    <li class="ms-3"><a class="text-muted" href="#">
+        <i class="fa-brands fa-instagram fs-1"></i>
+      </a></li>
+    <li class="ms-3"><a class="text-muted" href="#">
+        <i class="fa-brands fa-youtube fs-1"></i>
+      </a></li>
+  </ul>
+</footer>
+
+</html>
